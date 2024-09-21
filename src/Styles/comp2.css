@@ -1,0 +1,360 @@
+div.design-it{
+    overflow: hidden;
+    position: relative;
+    height: 20.313rem;
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    transition: all ease 0.5s;
+    z-index: 3;
+    /* padding-inline: 5%; */
+    padding: 0px 20% !important;
+    top: 0px;
+}
+
+
+div.design-it.scrollTo > div{
+    position: relative;
+    background-color: black;
+    border-radius:8px; 
+    /* overflow: hidden; */
+}
+div.design-it.scrollTo > div:hover{
+    position: relative;
+    background-color: white;
+    border-radius:8px; 
+    /* overflow: hidden; */
+    transition: .5s;
+}
+
+div.container{
+    color: var(--primary-color-2);
+    padding-block: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+div.container > div:nth-of-type(1){
+    max-width: 20.8125rem; 
+    width: 60%;
+}
+div.container > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.container > div > div >  p:nth-of-type(1){
+    color: var(--primary-color-2);
+    font-size: 2.1875rem;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+}
+div.design-it.scrollTo  div.container > div > div > p:nth-of-type(1),
+div.design-it.scrollTo  div.container > div > div > p:nth-of-type(2){
+    color: white;
+}
+/* div.container:hover  div > p:nth-of-type(1),
+div.container:hover  div > p:nth-of-type(2){
+    color: var(--primary-color-1);
+} */
+div.container > div > div > p:nth-of-type(2){
+    color: var(--primary-color-2);
+    font-family: better-yesterday;
+    font-size:  4.375rem;
+    font-weight: 400;
+    flex: 2;
+    text-align: center;
+}
+div.lets-go-together{
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #060606;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width:4.5rem;
+    height: 4.5rem;
+    cursor: pointer;
+} 
+
+div.design-it:hover div.lets-go-together{
+    background-color: black !important;
+    color: white !important;
+}      
+
+@media (max-width: 500px) {
+    div.design-it:hover div.lets-go-together{
+        background-color: black !important;
+        color: #E4BB89 !important;
+    } 
+}
+
+@media (max-width: 500px) {
+    div.container{
+        padding-block: 1rem !important;
+        background-color: #000 !important;
+        border: none !important;
+    }
+
+    div.lets-go-together{
+        top: 143%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: #E4BB89;
+        background-color: #000000;
+        border: 1px solid #E4BB89;
+        width: 7.2rem;
+        height:  7.2rem;
+        padding: 10px !important;
+        font-size: 1.25rem;
+        font-weight: 550;
+        padding: 20px !important;
+    }
+}
+/* div.lets-go-together.appear{
+    transform:  translateX(-50%) translateY(-50%) scale(0);
+    animation: appearance2 1s ease 1 forwards;
+}
+@keyframes appearance2 {
+    to{
+        transform:   translateX(-50%) translateY(-50%) scale(1);
+    }
+} */
+
+div.lets-go-together.disappear{
+    animation: disappearance2 1s ease 1 forwards;
+}
+@keyframes disappearance2 {
+    to{
+        top: 80%;
+        left: 85%;
+    }
+}
+/* div.design:hover div.lets-go-together{
+    color: var(--primary-color-2);
+    background-color:#060606;
+} */
+div.container > div > div:nth-of-type(1){
+    transform: translateY(100%);
+    visibility: hidden;
+}
+
+div.container > div > div:nth-of-type(1).scrollTo{
+    animation: moveUp 0.5s ease  1 forwards;
+}
+
+@keyframes moveUp  {
+    from{
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+div.container > div > div:nth-of-type(2){
+    transform: translateY(100%);
+    visibility: hidden;
+}
+div.container > div > div:nth-of-type(2).scrollTo{
+    animation: moveUp23 0.5s ease  0.5s 1 forwards;
+}
+
+@keyframes moveUp23  {
+    from{
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width: 768px){
+    div.design-it{
+        height: 29.25rem;
+        background-position: center;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+        transition: all ease 0.5s;
+        background-color: #000000;
+        padding-inline: 5%;
+    }
+    div.container{
+        /* max-width: 20.8125rem; */
+        /* width: 60%; */
+        /* margin: 0 auto; */
+        color: var(--primary-color-2);
+        /* padding-block: 1.875rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        position: relative;
+    }
+    div.container > div:nth-of-type(1){
+        max-width: 20.8125rem; 
+        width: 60%;
+    }
+    div.container > div > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    div.container > div > div > p:nth-of-type(1){
+        color: var(--primary-color-2);
+        font-size: 2.625rem;
+        font-weight: 500;
+        flex: 1;
+        text-align: center;
+    }
+    div.design-it.scrollTo  div.container > div > div > p:nth-of-type(1){
+        color: white;
+    }
+
+    div.container > div > div > p:nth-of-type(2){
+        color: var(--primary-color-2);
+        font-family: better-yesterday;
+        font-size: 5.25rem;
+        font-weight: 400;
+        flex: 2;
+        text-align: center;
+    }
+
+    div.design-it.scrollTo  div.container > div > div > p:nth-of-type(2){
+        color: white;
+    }
+
+    div.design-it.scrollTo div:hover  div.container > div > div > p:nth-of-type(1){
+        color: black;
+    }
+    div.design-it.scrollTo div:hover  div.container > div > div > p:nth-of-type(2){
+        color: black;
+    }
+
+    div.lets-go-together{
+        position: absolute;
+        /* bottom:20%;
+        right: 20%; */
+        color: black;
+        text-align: center;
+        font-size: var(--font-16);
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 50%;
+        width:6.5625rem;
+        height: 6.5625rem;
+    }
+    div.design-it.scrollTo div.lets-go-together{
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }       
+}
+
+@media screen and (min-width: 1024px){
+    div.design-it{
+        height: 29.25rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all ease 0.5s;
+        background-color: #000000;
+        padding-inline: 10%;
+    }
+    div.container{
+        /* position: relative; */
+        /* max-width: 20.8125rem; */
+        /* width: 60%; */
+        /* margin: 0 auto; */
+        color: var(--primary-color-2);
+        /* padding-block: 1.875rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+    }
+    div.container > div:nth-of-type(1){
+        max-width: 20.8125rem; 
+        width: 60%;
+    }
+    div.container > div > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    div.container > div > div > p:nth-of-type(1){
+        color: var(--primary-color-2);
+        font-size: var(--font-48);
+        font-weight: 500;
+        flex: 1;
+        text-align: center;
+    }
+    div.design-it.scrollTo  div.container > div > div > p:nth-of-type(1){
+        color: white;
+    }
+
+    div.container > div > div > p:nth-of-type(2){
+        color: var(--primary-color-2);
+        font-family: better-yesterday;
+        font-size: var(--font-96);
+        font-weight: 400;
+        flex: 2;
+        text-align: center;
+    }
+    div.design-it.scrollTo  div.container > div > div > p:nth-of-type(2){
+        color: white;
+    }
+
+    div.design-it.scrollTo div:hover  div.container > div > div > p:nth-of-type(1){
+        color: black;
+    }
+    div.design-it.scrollTo div:hover  div.container > div > div > p:nth-of-type(2){
+        color: black;
+    }
+
+    div.lets-go-together{
+        position: absolute;
+        /* bottom:20%;
+        right: 25%; */
+        color: black;
+        text-align: center;
+        font-size: var(--font-16);
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 50%;
+        width:6.5625rem;
+        height: 6.5625rem;
+    }
+    div.design-it.scrollTo div.lets-go-together{
+        background-color: white;
+        color: black;
+        font-weight: 600;
+    }    
+}
+
+@media (max-width: 800px) {
+    div.design-it{
+        padding: 0  5% !important;
+    }
+}

@@ -1,0 +1,239 @@
+div.learnmore-page {
+    min-height: 100vh;
+}
+
+div.learnmore-container{
+    padding-block-start: 230px;
+}
+
+@media screen and (max-width: 769px) {
+    div.learnmore-container{
+        padding-block-start: 180px;
+    }   
+}
+
+@media screen and (max-width: 426px) {
+    div.learnmore-container{
+        padding-block-start: 160px;
+    }   
+}
+
+div.learnmore-container  p{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #E4BB89;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+@media screen and (max-width: 426px) {
+    div.learnmore-container  p{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }   
+}
+div.care-container{
+    width:250px; 
+    margin:0 auto;
+} 
+@media screen and (max-width:426px) {
+    div.care-container{
+        width:180px; 
+        margin:0 auto;
+    } 
+}
+div.learnmore-container  p.care{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: paratype 1s steps(30) 1;
+}
+@keyframes paratype {
+    from {
+        width: 0; /* Start with no text */
+    }
+    to {
+        width: 250px; /* Reveal the entire text */
+    }
+}
+
+@media screen and (max-width:426px) {
+    @keyframes paratype {
+        from {
+            width: 0; /* Start with no text */
+        }
+        to {
+            width: 180px; /* Reveal the entire text */
+        }
+    }
+}
+div.gracias-container{
+    width:500px; 
+    margin:0 auto;
+    max-width:85%;
+}
+div.learnmore-container  p.gracias{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: paratype2 1s steps(30) 1;
+}
+@keyframes paratype2 {
+    from {
+        width: 0; /* Start with no text */
+    }
+    to {
+        width: 500px; /* Reveal the entire text */
+    }
+}
+
+div.learnmore-container > input{
+    max-width: 463px;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    width: 90%;
+    padding: 16px 0px 16px 14px;
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    margin-bottom: 65px;
+    transform: translateY(200%);
+    visibility: hidden;
+    animation: inputmoving 1s ease 1s 1 forwards;
+}
+
+div.learnmore-container > input:focus{
+    outline: none;
+}
+
+div.learnmore-container > input.error{
+    border: 1px solid #E00F0F;
+}
+@keyframes inputmoving {
+    from{
+        transform: translateY(200%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+div.learnmore-container > input::placeholder{
+    color: #9B9B9B;
+    font-size: 14px;
+    font-weight: 400;
+}
+div.learnmore-container > input.error::placeholder{
+    color: #E00F0F;
+}
+div.learnmore-div, div.learnmore-div2{
+    position: relative;
+    cursor: pointer;
+    width: 113px;
+    height: 113px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #E4BB89;
+    color: #E4BB89;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto 120px auto;
+    padding: 10px;
+}
+div.learnmore-div{
+    transform: translateY(100%);
+    visibility: hidden;
+    animation: divmoving 1s ease 1.5s 1 forwards;
+}
+@keyframes divmoving {
+    from{
+        transform: translateY(200%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+div.learnmore-div.error{
+    border: 2px solid #E00F0F;
+    color: #E00F0F;
+}
+div.learnmore-div2{
+    transform: translateY(100%);
+    visibility: hidden;
+    animation: divmoving2 1s ease 1s 1 forwards;
+}
+@keyframes divmoving2 {
+    to{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+div.learnmore-div::after{
+    content: "Learn more";
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0); 
+    width: 95%;
+    height: 95%;
+    background-color: #E4BB89;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    font-weight: 600;
+}
+div.learnmore-div.error::after{
+    background-color: #E00F0F;
+    color: #FFF;
+}
+div.learnmore-div2::after{
+    content: "Home";
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0); 
+    width: 95%;
+    height: 95%;
+    background-color: #E4BB89;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+}
+div.learnmore-div2:hover::after, div.learnmore-div:hover::after{
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+div.learnmore-div2:hover, div.learnmore-div:hover{
+    border-color: #E4BB89;
+}
+
+
+@media (max-width: 500px) {
+    div.learnmore-div, div.learnmore-div2{
+        border: 1px solid #E4BB89 !important;
+    }
+    div.learnmore-div2:hover::after, div.learnmore-div:hover::after{
+        transform: scale(0);
+    }
+}

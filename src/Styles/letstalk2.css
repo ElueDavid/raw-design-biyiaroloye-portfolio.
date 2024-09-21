@@ -1,0 +1,61 @@
+
+div.typewriter2{
+    margin: 0 auto;
+    margin-block: 0.5rem;
+    padding: 3rem 3rem;
+    max-width: 463px;
+    width: 80%;
+    background: #000;
+    border-radius: .3125rem;
+}
+div.typewriter2 > p{
+    font-size: 1.5rem;
+    width: 300px;
+    color: #E4BB89;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter2 1s steps(30) 1;
+}
+@media screen and (max-width:426px) {
+    div.typewriter2{
+        margin: 0 auto;
+        margin-block: 0.5rem;
+        padding: 3rem 2rem;
+        max-width: 463px;
+        width: 80%;
+        border-radius: .3125rem;
+    }
+    div.typewriter2 > p{
+        font-size: 1.0rem;
+    }
+}
+@keyframes typewriter2 {
+    from {
+        width: 0; /* Start with no text */
+    }
+    to {
+        width: 280px; /* Reveal the entire text */
+    }
+}
+div.lettalk2 > div.select-service{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0px 1rem 1rem;
+    border-radius: .375rem;
+    border: .0625rem solid #FFF;
+    max-width: 25rem;
+    width: 80%;
+    background-color: transparent;
+    color:#9B9B9B;
+    margin-bottom: 3.5625rem;
+    cursor: pointer;
+}
+div.select-service > svg{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

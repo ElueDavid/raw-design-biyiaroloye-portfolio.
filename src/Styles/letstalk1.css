@@ -1,0 +1,139 @@
+div.lettalk1 >input{
+    display: block;
+    max-width: 463px;
+    width: 80%;
+    padding-block: 1rem;
+    padding-inline-start: 1rem;
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    margin: 0 auto;
+    color: #9B9B9B;
+    /* margin-top: 6.25rem; */
+    margin-bottom: 1.3125rem;
+    transform: translateY(150%);
+    visibility: hidden;
+    animation: letstalkinput 1s ease 1s 1 forwards;
+}
+
+@keyframes  letstalkinput {
+    from{
+        transform: translateY(150%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+div.lettalk1 >input.error{
+    border: 1px solid #E00F0F;
+}
+div.lettalk1 >input.error::placeholder{
+    color: #E00F0F;
+}
+div.typewriter{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px 20px 80px 20px;
+    max-width: 463px;
+    width: 95%;
+    /* background: red; */
+    border-radius: .3125rem;
+    position: relative;
+}
+div.typewriter > p{
+    font-size: 1.5rem;
+    width: 460px;
+    color: #E4BB89;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 1s steps(30) 1;
+    position: absolute;
+    left: 0px;
+}
+@keyframes typewriter {
+    from {
+        width: 0; /* Start with no text */
+    }
+    to {
+        width: 460px; /* Reveal the entire text */
+    }
+}
+@media screen and (max-width:506px) {
+    div.typewriter{
+        padding: 50px 10px 60px 10px;
+        justify-content: center !important;
+        width: 320px;
+    }
+    div.typewriter > p{
+        font-size: 1.0rem;
+        width: 320px;
+        
+        transform: translate(-0%,-50%);
+    }
+    @keyframes typewriter {
+        from {
+            width: 0; /* Start with no text */
+        }
+        to {
+            width: 320px; /* Reveal the entire text */
+        }
+    }   
+}
+div.lettalk1 >input::placeholder{
+    color: #9B9B9B;
+    font-size: .875rem;
+    font-weight: 400;
+}
+div.lettalk1 >input:focus{
+    outline: none;
+}
+
+div.lettalk1 >select{
+    display: block;
+    margin: 0 auto;
+    max-width: 17.375rem;
+    width: 60%;
+    appearance: none;
+    padding: 1rem 0 1rem 1rem;
+    font-size: .875rem;
+    border-radius: .375rem;
+    border: 1px solid #FFF;
+    background-color:  transparent;
+    color: #9B9B9B;
+    outline: none;
+    margin-bottom:4.0625rem;
+    transform: translateY(150%);
+    visibility: hidden;
+    animation: letstalkselect 1s ease 1.5s 1 forwards;
+}
+
+@keyframes  letstalkselect {
+    from{
+        transform: translateY(150%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+
+div.lettalk1 >select.error{
+    border: 1px solid #E00F0F;
+}
+div.lettalk1 >select > option{
+    padding: .3125rem .625rem;
+    color: #9B9B9B;
+    font-size: .875rem;
+    font-weight: 400;
+}
+div.lettalk1 >select.error > option:nth-of-type(1){
+    color: #E00F0F;
+}
+
+
